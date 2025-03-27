@@ -1,0 +1,48 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Prática 25</title>
+<link href="estilos.css" rel="stylesheet">
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="carregar.js"></script>  
+</head>
+<body onload="inicio()">   <!-- responsável por chamar a função durante o carregamento da página --> 
+<div class="caixa0"> 
+        <span id="logo"><img src="logo1.png"></span>
+    </div>
+    <div class="caixa1">
+    <h2>CARREGAMENTO DINÂMICO DE DADOS COM JAVASCRIPT</h2>
+    <h3>Capture o infiltrado</h3>
+        <br>
+        <p> <u>Primeiro passo:</u> Selecionar um valor desta lista: </p>
+        <form>
+                <p>
+                    <select id='select1' onChange='carregarSelect2(this.value);'> <!-- responsável por desbloquear a segunda lista, através do evento onChange, e com a função mostrar as opções referentes à opção desta lista -->
+                        <option value='0'>Selecione uma opção</option>
+                        <option value='1'>Magos</option>
+                        <option value='2'>Hobbits</option>
+                        <option value='3'>Anões</option>
+                    </select>
+        <br>        <br>
+        <p> <u>Segundo passo:</u> Uma vez que o primeiro valor tenha sido selecionado, uma lista de valores associados ao anterior será carregada dinamicamente na próxima lista.</p>
+        <br>
+                <select id='select2' onChange='selecionadoSelect2();' disabled> <!-- como é uma lista desativada e com valores inseridos pela função, esta lista é bastante simples -->
+                    <option value='0'>Desativado</option>
+                </select>
+                <div class="fotografia">
+                    <p id="center">
+                        <img id="foto" src="img/10.jpg">
+                        <p class="infiltrado" id="watch">Cuidado, o Sauron está de vigia...</p>
+                    </p>
+                </div>
+            </p>
+                <p id="center">
+                    <input id="reset" type="button" name="reset" onClick="location.reload();" class="botao gris" value="Reiniciar">
+                </p>
+                    </form>
+        </div>
+</body>
+</html>
